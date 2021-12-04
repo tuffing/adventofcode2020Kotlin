@@ -14,7 +14,7 @@ class ResultController(val fileService: FileService, val d1: Day1Service, val d2
 
     @GetMapping("day2")
     fun dayTwo(): Pair<Int, Int> {
-        var input = fileService.getInputAsListOfStrings("testInput/day2input.txt");
+        var input = fileService.getInputAsListOfStrings("input/day2input.txt");
 
         return Pair(d2.partOne(input), d2.partTwo(input));
     }

@@ -15,7 +15,7 @@ class Day2Tests {
 
     @Test
     fun Day2Part1() {
-        var input = fileService.getInputAsListOfNumbers("testInput/day2.txt");
+        var input = fileService.getInputAsListOfStrings("input/day2.txt");
         var result = d2.partOne(input);
         assertEquals(result, 2);
     }
