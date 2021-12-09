@@ -11,4 +11,8 @@ class FileService {
     fun getInputAsListOfStrings(filePath: String): List<String> {
         return this::class.java.classLoader.getResource(filePath).readText().split("\r\n").toList();
     }
+
+    fun getInputAsBlocksOfStrings(filePath: String): List<String> {
+        return this::class.java.classLoader.getResource(filePath).readText().split("\r\n\r\n").toList();
+    }
 }

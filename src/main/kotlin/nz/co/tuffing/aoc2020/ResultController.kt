@@ -8,7 +8,7 @@ import java.math.BigInteger
 class ResultController(val fileService: FileService, val d1: Day1Service,
                        val d2: Day2Service, val d3: Day3Service, val d4: Day4Service,
                        val d5: Day5Service, val d6: Day6Service, val d7: Day7Service,
-                       val d8: Day8Service) {
+                       val d8: Day8Service, val d12: Day12Service) {
     @GetMapping("day1")
     fun dayOne(): Pair<Int, Int> {
         var input = fileService.getInputAsListOfNumbers("input/day1input.txt");
@@ -63,5 +63,12 @@ class ResultController(val fileService: FileService, val d1: Day1Service,
         var input = fileService.getInputAsListOfStrings("input/day8input.txt");
 
         return Pair(d8.partOne(input), d8.partTwo(input));
+    }
+
+    @GetMapping("day12")
+    fun dayTwelve(): Pair<Int, Int> {
+        var input = fileService.getInputAsListOfStrings("input/day12input.txt");
+
+        return Pair(d12.partOne(input), d12.partTwo(input));
     }
 }
